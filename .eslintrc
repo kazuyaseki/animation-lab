@@ -1,0 +1,38 @@
+{
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended'
+  ],
+  settings: {
+    react: {
+      version: require('./package.json').dependencies.react,
+      pragma: 'React',
+    },
+  },
+  plugins: [
+    'prettier',
+    '@typescript-eslint',
+    'react',
+    'react-hooks'
+  ],
+  env: {
+    'jest': true,
+    'node': true,
+    'es6': true
+  },
+  rules: {
+    'prettier/prettier': [
+      'error',
+      {
+       'trailingComma': 'none',
+       'tabWidth': 2,
+       'semi': false,
+       'singleQuote': true,
+       'jsxBracketSameLine': false,
+       'printWidth': 180
+      }
+    ]
+  }
+}
