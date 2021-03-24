@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import CircleWave from './pages/CircleWave'
+import GraphicsProgrammingNyumon from './pages/GraphicsProgrammingNyumon'
 
 export default function App() {
   return (
@@ -12,7 +13,7 @@ export default function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/graphics-programming-nyumon">graphics-programming-nyumon</Link>
             </li>
             <li>
               <Link to="/circleWave">CircleWave</Link>
@@ -20,28 +21,18 @@ export default function App() {
           </ul>
         </nav>
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/graphics-programming-nyumon">
+            <GraphicsProgrammingNyumon />
           </Route>
           <Route path="/circleWave">
             <CircleWave />
           </Route>
           <Route path="/">
-            <Home />
+            <GraphicsProgrammingNyumon />
           </Route>
         </Switch>
       </div>
     </Router>
   )
-}
-
-function Home() {
-  return <h2>Home</h2>
-}
-
-function About() {
-  return <h2>About</h2>
 }
