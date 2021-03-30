@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import CircleWave from './pages/CircleWave'
+import FramerMotion from './pages/FramerMotion'
 import GraphicsProgrammingNyumon from './pages/GraphicsProgrammingNyumon'
 
 export default function App() {
@@ -18,6 +19,9 @@ export default function App() {
             <li>
               <Link to="/circleWave">CircleWave</Link>
             </li>
+            <li>
+              <Link to="/framer-motion">Framer Motion</Link>
+            </li>
           </ul>
         </nav>
 
@@ -27,6 +31,9 @@ export default function App() {
           </Route>
           <Route path="/circleWave">
             <CircleWave />
+          </Route>
+          <Route path="/framer-motion">
+            <FramerMotion />
           </Route>
           <Route path="/">
             <GraphicsProgrammingNyumon />
